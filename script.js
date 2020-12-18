@@ -73,6 +73,10 @@ function render() {
         <p><button class="btnReinit">Réinitialiser la commande</button></p>
         <p><button class="btnCommander">Passer la commande</button></p>
     </div>
+    <div class="commandeFinie d-none">
+        <p>Votre commande a bien été enregistrée!</p>
+        <button class="btnAnnuler">Annuler la commande</button>
+    </div>
 </footer>
 `;
 
@@ -100,9 +104,9 @@ function render() {
         inputQte.classList.add('d-none');
         commande.innerHTML = `${inputQte.value} x ${vaccins[i].nom}`;
         commande.classList.remove('d-none');
+        prix += inputQte.value * vaccins[i].prix_unitaire;
+        h3Commande.innerHTML = `<h3>Prix final: ${prix}$</h3>`;
       }
-      prix += inputQte.value;
-      h3Commande.innerHTML = `<h3>Prix final: ${prix}$</h3>`;
     });
   });
 
@@ -134,9 +138,9 @@ function render() {
         app.querySelector('main').classList.add('d-none');
         app.querySelector('.btnReinit').classList.add('d-none');
         app.querySelector('.btnCommander').classList.add('d-none');
+        app.querySelector('.commandeFinie').classList.remove('d-none');
       }
     });
-    app.querySelector('footer').innerHTML += '<p>Votre commande a bien été enregistrée!</p><button class="btnAnnuler">Annuler la commande</button>';
   });
 
   // ------------------REINITIALISER COMMANDE----------------
