@@ -8,7 +8,7 @@ function render() {
   // creation header
   const strHeader = `
     <header class="flex">
-        <h1>Vaccins COVD19</h1>
+        <h1>Vaccins COVID19</h1>
         <section class="buttonsHeader">
             <button class="btnTriPrix">Trier vaccins par prix</button>
             <button class="btnApprouve">Vaccins approuvés seulement</button>
