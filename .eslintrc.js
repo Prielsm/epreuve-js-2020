@@ -22,5 +22,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/jsx-filename-extension': 'off',
     'max-len': 'off',
+    'no-param-reassign': 'off',
   },
 };

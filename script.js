@@ -2,23 +2,24 @@ import './styles.scss';
 import { vaccins } from './src/data';
 
 const app = document.getElementById('app');
+let prix = 0;
 
 function render() {
   // creation header
   const strHeader = `
-<header class="flex">
-    <h1>Vaccins COVD19</h1>
-    <section class="buttonsHeader">
-        <button class="btnTriPrix">Trier vaccins par prix</button>
-        <button class="btnApprouve">Vaccins approuvés seulement</button>
-    </section>
-</header>`;
+    <header class="flex">
+        <h1>Vaccins COVD19</h1>
+        <section class="buttonsHeader">
+            <button class="btnTriPrix">Trier vaccins par prix</button>
+            <button class="btnApprouve">Vaccins approuvés seulement</button>
+        </section>
+    </header>`;
 
   // main partie 1
   let strMain = `
-<main>
-    <section class="cards flex">
-`;
+    <main>
+        <section class="cards flex">
+    `;
 
   // footer partie 1
   let strFooter = `<footer class="flex">
@@ -32,7 +33,7 @@ function render() {
   vaccins.forEach((vaccin, i) => {
     // main partie 2
     strMain += `
-  <div class="card">
+        <div class="card">
           <img src="${vaccin.img}" alt="">
           ${vaccin.approuve ? '<p class="approuve">Approuvé</p>' : '<p class="non_approuve">Non approuvé</p>'}
           <section class="sectionText">
@@ -82,7 +83,6 @@ function render() {
 
   app.innerHTML = strHeader + strMain + strFooter;
 
-  //
   // -------------------BOUTON RESERVER + AJOUT COMMANDE-------------------
   const btnReserver = app.querySelectorAll('.btnReserver');
   const h3Commande = app.querySelector('footer h3');
@@ -95,7 +95,6 @@ function render() {
     // console.log(inputQte);
     // console.log(commande);
 
-    let prix = 0;
     monBouton.addEventListener('click', () => {
       console.log();
       if (inputQte.value !== '' && inputQte.value <= vaccins[i].quantite) {
@@ -146,11 +145,13 @@ function render() {
   // ------------------REINITIALISER COMMANDE----------------
   const btnReinit = app.querySelector('.btnReinit');
   btnReinit.addEventListener('click', () => {
+    prix = 0;
     render();
   });
 
   //   !!!!!!!!!!!!!!!BOUTON TRI PAR PRIX!!!!!!!!!!!!!!!!!!
-  //   !!!!!!!!!!!!!!!Marche seulement pour l'aller et fait buguer le reste de mon app!!!!!!!!!!!!!!!!!!
+
+  //   !!!!!!!!!!!!!!!Marche seulement pour l'aller et fait buguer le reste de mon app (event boutons)!!!!!!!!!!!!!!!!!!
 
 //   // ------------------------TRI DES VACCINS PAR PRIX----------------------
 //   const dicoPrix = new Map();
@@ -199,5 +200,6 @@ render();
 document.body.addEventListener('click', (e) => {
   if (e.target.matches('.btnAnnuler')) {
     render();
+    prix = 0;
   }
 });
