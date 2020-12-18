@@ -5,9 +5,10 @@ export const vaccins = [
     inventeurs: ['Sinopharm'],
     lieux_de_production: ['Chine'],
     technologie: 'virus inactivé',
-    quantité: 420,
-    prix_unitaire: '17$',
-    approuvé: true,
+    quantite: 420,
+    prix_unitaire: 17,
+    approuve: true,
+    img: 'bbibp-corv.jpg',
   },
 
   {
@@ -16,9 +17,10 @@ export const vaccins = [
     inventeurs: ['Gamaleya'],
     lieux_de_production: ['Russie', 'Inde'],
     technologie: 'adenovirus',
-    quantité: 130,
-    prix_unitaire: '12$',
-    approuvé: false,
+    quantite: 130,
+    prix_unitaire: 12,
+    approuve: false,
+    img: 'sputnik-v.jpg',
   },
 
   {
@@ -27,9 +29,10 @@ export const vaccins = [
     inventeurs: ['AstraZeneca', 'University of Oxford'],
     lieux_de_production: ['Royaume Unis', 'Brésil', 'Inde'],
     technologie: 'adenovirus',
-    quantité: 5028,
-    prix_unitaire: '1.78$',
-    approuvé: false,
+    quantite: 5028,
+    prix_unitaire: 1.78,
+    approuve: false,
+    img: 'azd1222.jpg',
   },
 
   {
@@ -38,9 +41,10 @@ export const vaccins = [
     inventeurs: ['BioNTech', 'Pfizer', 'Fosun Pharma'],
     lieux_de_production: ['Allemagne', 'USA'],
     technologie: 'ARN messager',
-    quantité: 980,
-    prix_unitaire: '14$',
-    approuvé: true,
+    quantite: 980,
+    prix_unitaire: 14,
+    approuve: true,
+    img: 'tozinameran.jpg',
   },
 
   {
@@ -49,9 +53,10 @@ export const vaccins = [
     inventeurs: ['Moderna', 'NIAID', 'BARDA'],
     lieux_de_production: ['USA'],
     technologie: 'ARN messager',
-    quantité: 240,
-    prix_unitaire: '28$',
-    approuvé: false,
+    quantite: 240,
+    prix_unitaire: 28,
+    approuve: false,
+    img: 'mrna-1273.jpg',
   },
 
   {
@@ -60,8 +65,9 @@ export const vaccins = [
     inventeurs: ['Johnson & Johnson', 'BIDMC'],
     lieux_de_production: ['USA', 'Amérique du Sud', 'Ukraine', 'Afrique du Sud'],
     technologie: 'adenovirus',
-    quantité: 110,
-    prix_unitaire: '31$',
-    approuvé: false,
+    quantite: 110,
+    prix_unitaire: 31,
+    approuve: false,
+    img: 'ad26-cov2-s.jpg',
   },
 ];

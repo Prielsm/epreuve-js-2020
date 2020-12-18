@@ -3,9 +3,105 @@
 * {
   box-sizing: border-box;
 }
+.flex {
+  display: flex;
+}
+.d-none {
+  display: none;
+}
+button{
+  padding: 10px;
+  margin: 10px;
+}
 html,
 body {
   padding: 0;
   margin: 0;
   min-height: 100%;
+  font-size: 15px;
+
+  // ------------HEADER-------------
+  header{
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 50px;
+    background-color: rgb(235, 231, 231);
+
+    h1 {
+    }
+    .buttonsHeader {
+      
+    }
+  }
+
+  //-----------------MAIN SECTION CARDS-----------------
+  .cards{
+    margin-top: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    .card{
+      border: 1px black solid;
+      width: 350px;
+      margin: 20px;
+      background-color: rgb(235, 231, 231);
+
+      img{
+        width: 100%;
+        height: 250px;
+      }
+      .approuve, .non_approuve{
+        text-align: center;
+        padding: 10px;
+        background-color: cadetblue;
+      }
+      .non_approuve{
+        background-color: tomato;
+      }
+      .sectionText{
+        margin: 20px;
+        margin-top: 0;
+        
+        h2{
+          text-align: center;
+        }
+        .qtePrix {
+          justify-content: space-around;
+        }
+        .reserver{
+          justify-content: center;
+          align-items: center;
+          button {
+            padding: 5px 10px;
+          }
+          input {
+            height: 30px;
+          }
+        }
+      }
+      
+    }
+  }
+  // -----------------FOOTER-------------------
+  footer{
+    justify-content: space-around;
+    margin-top: 50px;
+    background-color: rgb(235, 231, 231);
+    .btnFooter {
+      padding: 20px;
+      p{
+        margin: 0;
+        button {
+          height: 40px;
+          margin: 5px;
+        }
+      }
+      
+    }
+    
+  }
 }
